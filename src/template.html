@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Jeopardy</title>
+
+    </head>
+    <body>
+        <header class="header-row">
+            <img class="logo" src="assets/images/jeopardy-logo.jpeg">
+            <nav>
+                <ul class="nav-list">
+                    <li><a class="nav-list__item-link nav-list__item-link--active" href="#">Home</a></li>
+                    <li><a class="nav-list__item-link" href="#">Scores</a></li>
+                    <li><a class="nav-list__item-link" href="#">Contact</a></li>
+                    <li><a class="nav-list__item-link" href="#">Join the team</a></li>
+                </ul>
+            </nav>
+        </header>
+
+            <main id="main"> 
+                <div class="score-container">
+                    <p>Score: $<span class="score">0</span></p>
+                    <button class="test">VIEW HIGH SCORES</button>
+                </div>
+
+                <div class="game-grid-container">
+
+                    <div class="grid-item grid__category-tile"></div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="200">$200</div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="400">$400</div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="600">$600</div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="800">$800</div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="1000">$1000</div>
+
+                    <div class="grid-item grid__category-tile"></div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="200">$200</div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="400">$400</div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="600">$600</div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="800">$800</div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="1000">$1000</div>
+
+                    <div class="grid-item grid__category-tile"></div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="200">$200</div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="4400">$400</div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="600">$600</div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="800">$800</div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="1000">$1000</div>
+
+                    <div class="grid-item grid__category-tile"></div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="200">$200</div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="400">$400</div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="600">$600</div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="800">$800</div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="1000">$1000</div>
+
+                    <div class="grid-item grid__category-tile"></div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="200">$200</div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="400">$400</div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="600">$600</div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="800">$800</div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="1000">$1000</div>
+
+                    <div class="grid-item grid__category-tile"></div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="200">$200</div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="400">$400</div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="600">$600</div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="800">$800</div>
+                    <div class="grid-item grid__clue-tile" data-remaining data-value="1000">$1000</div>
+
+                </div>
+            </main>
+
+            <dialog class="modal">
+                <div class="modal__main">
+                    <button class="modal__button--close">X</button>
+                    <div class="modal__clue--center">
+                        <h2 class="jeopardy-clue"></h2>
+                    </div>
+                    
+                    <div class="modal__answer">
+                        <button class="modal__button-buzz">Buzz in!</button>
+                        <button class="modal__button-pass">Pass...</button>
+                        <form class="modal__form" autocomplete="off">
+                            <input class="modal__form-input" type="text" id="answer" name="answer">
+                            <input class="modal__form-submit" type="submit" value="Submit">
+                        </form>
+                        
+                        <div class="modal__answer-confirmation">
+                            <p class="modal__answer-preface"></p>
+                            <p class="modal__answer-text"></p>
+                            <p class="modal__answer-override">Did you answer correctly?</p>
+                            <button class="modal__answer-veto"></button>
+                        </div>
+                    </div>
+                </div>
+              </dialog>
+
+        
+        <footer>
+            <p><small>&copy ELISHEVA ELBAZ 2021</small></p>
+        </footer>
+    </body>
+</html>

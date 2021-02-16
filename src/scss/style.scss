@@ -1,0 +1,196 @@
+@import 'variables';
+
+html, body{
+  overscroll-behavior: none;
+}
+
+body{
+  position:relative;
+  margin:0;
+  height:1000px;
+
+  &::before{
+    content: "";
+    background-image: url(../assets/images/jeopardy-background.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+    z-index:-1;
+  }
+}
+
+.header-row{
+  display:flex;
+  justify-content:space-between;
+  background-color:$dark-blue;
+  align-items:center;
+}
+
+.logo{
+  max-width:225px;
+}
+
+.nav-list{
+  list-style:none;
+  
+  &__item-link{
+    text-decoration:none;
+    color:#a3848f;
+    // padding: 50px 10px;
+    // height:400px;
+    box-shadow: 0 5px 0 lighten( $dark-blue, 20%);
+    &hover{
+      color:purple;
+    }
+
+    &--active{
+      // padding: 50px 10px;
+      box-shadow: 0 5px 0 lighten( $dark-blue, 10%);
+      font-size:125%;
+
+    }
+  }
+}
+
+.nav-list li{
+  display:inline;
+  padding:20px;
+  font-size: larger;
+}
+
+.score-container{
+  margin-top:10%;
+  text-align:center;
+  font-size:1.7em;
+  color: $yellow-secondary;
+}
+
+.game-grid-container{
+  display:grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-flow: column;
+  border: solid 3px $blue-black;
+  margin-left:15px;
+  margin-right:15px;
+}
+
+.grid-item{
+  text-align:center;
+  text-shadow: 2px 2px $shadow-black;
+  font-size:2.5em; 
+  padding-top: 15px;
+  justify-content:center;
+  background-color: $blue-primary;
+  color: $yellow-secondary;
+  border: solid 2px $blue-black;
+}
+
+.grid-item[data-remaining]:hover{
+  background-color:lighten( $blue-primary, 4%);
+}
+
+.grid__category-tile{
+  border-bottom-width: 4px;
+  color: #dae8fb;
+  font-size:1.8em;; 
+
+}
+
+// is this still in here?
+.fieldset-narrow{
+  width:70%;
+  background-color:rgba(231, 205, 204, 0.4)
+}
+
+.modal{
+  display:none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  
+  width: 100%;
+  height:100%;
+
+  &__main{
+    background-color: #131689;
+    height: 80%;
+    margin: 6vh;
+  }
+
+  &__clue--center{
+    height: 80%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  &__button--close{
+    margin: 10px;
+  }
+
+  &__answer{
+    display: flex;
+    justify-content: center;
+    background-color: #527ac1;
+  }
+
+  &__button-buzz{
+    font-size:2em;
+    padding:10px;
+    display:none;
+    margin: 20px auto;
+  }
+  &__button-pass{
+    font-size:2em;
+    padding:10px;
+    display:none;
+    margin: 20px auto;
+  }
+
+  &__answer-text{
+    color: $yellow-secondary;
+    font-size:2em;
+    margin-top:10px;
+  }
+
+  &__answer-override{
+    display:none;
+  }
+
+  &__answer-veto{
+    display:none;
+  }
+
+  &__form{
+    font-size:2em;
+    padding:10px;
+    margin: 20px auto;
+    display:none;
+  }
+
+  &__answer-confirmation{
+    display:none;
+    padding-bottom:10px;
+  }
+
+  &--active{
+    display:block;
+  }
+}
+
+.jeopardy-clue{
+  font-size: 4em;
+  color: #f1f1f9;
+  text-align:center;
+  width:90%;
+  text-shadow: 2px 2px $shadow-black; 
+}
