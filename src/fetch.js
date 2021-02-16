@@ -1,4 +1,4 @@
-const baseJeopardyURL = 'http://jservice.io/api';
+const baseJeopardyURL = 'https://jservice.io/api';
 const baseTextSimilarityURL = 'https://api.dandelion.eu/datatxt/sim/v1/';
 const token = 'ec7a5cd8231b45fa90b9f78fa8b23570';
 
