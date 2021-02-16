@@ -1,6 +1,4 @@
-import './scss/style.scss';
-import { getClue, getCategories } from './fetch';
-import openModal from './modal';
+// import './scss/style.scss';
 
 const gameBoard = document.querySelector('.game-grid-container');
 

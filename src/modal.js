@@ -1,4 +1,3 @@
-import { getSimilarity } from './fetch';
 
 const modal = document.querySelector('.modal');
 const modalButtonClose = document.querySelector('.modal__button--close');
@@ -25,7 +24,7 @@ let answerGlobal;
 let timeoutId;
 let score = 0;
 
-export default function openModal(clue, answer, value) {
+function openModal(clue, answer, value) {
   if (modal) {
     modal.classList.toggle('modal--active');
   }
